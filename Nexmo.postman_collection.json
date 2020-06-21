@@ -1,0 +1,407 @@
+{
+	"info": {
+		"_postman_id": "4e51f806-ec09-4ecc-8999-0b68c493b0ad",
+		"name": "Nexmo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Number Insight API",
+			"item": [
+				{
+					"name": "Number Insight Basic",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.nexmo.com/ni/basic/json?api_key={{api_key}}&api_secret={{api_secret}}&number={{sg_number}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"nexmo",
+								"com"
+							],
+							"path": [
+								"ni",
+								"basic",
+								"json"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "{{api_key}}"
+								},
+								{
+									"key": "api_secret",
+									"value": "{{api_secret}}"
+								},
+								{
+									"key": "number",
+									"value": "{{sg_number}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Number Insight Standard",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.nexmo.com/ni/standard/json?api_key={{api_key}}&api_secret={{api_secret}}&number={{sg_number}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"nexmo",
+								"com"
+							],
+							"path": [
+								"ni",
+								"standard",
+								"json"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "{{api_key}}"
+								},
+								{
+									"key": "api_secret",
+									"value": "{{api_secret}}"
+								},
+								{
+									"key": "number",
+									"value": "{{sg_number}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Number Insight Advanced",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.nexmo.com/ni/advanced/json?api_key={{api_key}}&api_secret={{api_secret}}&number={{sg_number}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"nexmo",
+								"com"
+							],
+							"path": [
+								"ni",
+								"advanced",
+								"json"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "{{api_key}}"
+								},
+								{
+									"key": "api_secret",
+									"value": "{{api_secret}}"
+								},
+								{
+									"key": "number",
+									"value": "{{sg_number}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Verify API",
+			"item": [
+				{
+					"name": "Start Verification - SMS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.nexmo.com/verify/json?api_key={{api_key}}&api_secret={{api_secret}}&number={{sg_number}}&brand=Nexmo",
+							"protocol": "https",
+							"host": [
+								"api",
+								"nexmo",
+								"com"
+							],
+							"path": [
+								"verify",
+								"json"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "{{api_key}}"
+								},
+								{
+									"key": "api_secret",
+									"value": "{{api_secret}}"
+								},
+								{
+									"key": "number",
+									"value": "{{sg_number}}"
+								},
+								{
+									"key": "brand",
+									"value": "Nexmo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check SMS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.nexmo.com/verify/check/json?api_key={{api_key}}&api_secret={{api_secret}}&request_id=1002371368514786ad479d4ec58d3d31&code=1355",
+							"protocol": "https",
+							"host": [
+								"api",
+								"nexmo",
+								"com"
+							],
+							"path": [
+								"verify",
+								"check",
+								"json"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "{{api_key}}"
+								},
+								{
+									"key": "api_secret",
+									"value": "{{api_secret}}"
+								},
+								{
+									"key": "request_id",
+									"value": "1002371368514786ad479d4ec58d3d31"
+								},
+								{
+									"key": "code",
+									"value": "1355"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Verification",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.nexmo.com/verify/control/json?api_key={{api_key}}&api_secret={{api_secret}}&request_id=&cmd=cancel",
+							"protocol": "https",
+							"host": [
+								"api",
+								"nexmo",
+								"com"
+							],
+							"path": [
+								"verify",
+								"control",
+								"json"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "{{api_key}}"
+								},
+								{
+									"key": "api_secret",
+									"value": "{{api_secret}}"
+								},
+								{
+									"key": "request_id",
+									"value": ""
+								},
+								{
+									"key": "cmd",
+									"value": "cancel"
+								}
+							]
+						},
+						"description": "\n"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Voice API",
+			"item": [
+				{
+					"name": "Download Recording",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTI1Nzk1ODgsImp0aSI6IjYyM2QyNmMwLWIyM2YtMTFlYS1iMjBiLWM5OGNkNTdiZjYwYyIsImFwcGxpY2F0aW9uX2lkIjoiOTg1NWUyYjAtNGViOS00ZTkwLTk0NjUtZGU4MDVlNTEwMDU0In0.jccuoJ0gsZ5OYiXDr9Ra_D9tz52mPFLxE6iym-fZP5tYXZZj6aIZGEXvTQv7rdh_0mdqFrcAQcL2TN_e3pzRwg5lNSB5kzn-eTot7Tn0B0GXK06l7TQrlBC7zXOMIKd3Y3W8ePN6cgvE4IxwFhmBBLX7fixZqxui-gBbaaFVpXS7ixJ7Doc8cOkH4IjfeElEQU1BDm4AjbxRgatgVuW1MocH6dG0YZxeNR5mWzncqV0L3X65He1bBltvx4Ys6pi62jEOFlf-2Vsouu_z-La-HwezVZcR4baxYjOQYqNVu5YxF8LBTvU2w2uBn_U2yVPun8Ec3di2rkd8tIgzmGJoRQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTI0NzMxMzIsImp0aSI6Ijg1MWE5ZTUwLWIxNDctMTFlYS04NmU3LWU1NjY0MDVhY2FlYSIsImFwcGxpY2F0aW9uX2lkIjoiOTg1NWUyYjAtNGViOS00ZTkwLTk0NjUtZGU4MDVlNTEwMDU0In0.nLpROTStbVT_OLM_cIAwShfjZAwmM6UE-np_ml8L3F4hqlInhM7TPQbTLoC0VEdb16_fxLPHKu9yTDpS6W9rXV3WZtcGfTq9LdWMBotNbOOX89U_XAqDQhJwYIsMivWsapr04MFOil1F5bhz9jp_S_mdF4iLltinLNRbJsPIwFRCWqbE1N35pZKvkf4sioJKTRYpGEJvS5YFy3_6lms2G9mvegt8-sHtB4xJS7op64ZTtmkrUeWu5o4YA4HJ-nEjFhfbKKB3hEOXxNF7k7X8KhXnsmau-tUGjQTFUD9UWooO2EsZNWPj_uA7YI5d2ECXcN7XeihrbLI_ZcXd9IMNbQ"
+							}
+						],
+						"url": {
+							"raw": "https://api.nexmo.com/v1/files/ef901ee6-d668-4590-ab43-9d8efb59cb73",
+							"protocol": "https",
+							"host": [
+								"api",
+								"nexmo",
+								"com"
+							],
+							"path": [
+								"v1",
+								"files",
+								"ef901ee6-d668-4590-ab43-9d8efb59cb73"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "SMS API",
+			"item": [
+				{
+					"name": "Send SMS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "from",
+									"value": "Demo",
+									"type": "text"
+								},
+								{
+									"key": "text",
+									"value": "The answer is 42",
+									"type": "text"
+								},
+								{
+									"key": "to",
+									"value": "{{in_number}}",
+									"type": "text"
+								},
+								{
+									"key": "api_secret",
+									"value": "{{api_secret}}",
+									"type": "text"
+								},
+								{
+									"key": "api_key",
+									"value": "{{api_key}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://rest.nexmo.com/sms/json",
+							"protocol": "https",
+							"host": [
+								"rest",
+								"nexmo",
+								"com"
+							],
+							"path": [
+								"sms",
+								"json"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Messaging API",
+			"item": [
+				{
+					"name": "Send file to WhatsApp ",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"from\": { \"type\": \"whatsapp\", \"number\": \"14157386170\" },\r\n    \"to\": { \"type\": \"whatsapp\", \"number\": \"6582816883\" },\r\n    \"message\": {\r\n      \"content\": {\r\n        \"type\": \"audio\",\r\n        \"audio\": { \r\n          \"url\": \"https://api.nexmo.com/v1/files/6dc1a23e-4ee8-47b5-9b75-06a0a4b091b6\"\r\n        }\r\n      }\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://messages-sandbox.nexmo.com/v0.1/messages",
+							"protocol": "https",
+							"host": [
+								"messages-sandbox",
+								"nexmo",
+								"com"
+							],
+							"path": [
+								"v0.1",
+								"messages"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
