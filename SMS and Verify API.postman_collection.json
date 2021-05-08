@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "aef838fe-5dad-4d8f-8c58-410236fa4c19",
-		"name": "SMS & Verify API",
+		"name": "SMS and Verify API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -17,7 +17,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://api.nexmo.com/verify/json?api_key={{api_key}}&api_secret={{api_secret}}&number={{personal_in}}&brand=Nexmo&next_event_wait=300",
+							"raw": "https://api.nexmo.com/verify/json?api_key={{api_key}}&api_secret={{api_secret}}&number={{customer_number}}&brand=Nexmo&next_event_wait=300",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -39,7 +39,7 @@
 								},
 								{
 									"key": "number",
-									"value": "{{personal_in}}"
+									"value": "{{customer_number}}"
 								},
 								{
 									"key": "brand",
@@ -48,6 +48,11 @@
 								{
 									"key": "next_event_wait",
 									"value": "300"
+								},
+								{
+									"key": "workflow_id",
+									"value": "3",
+									"disabled": true
 								}
 							]
 						}
@@ -88,7 +93,7 @@
 							]
 						},
 						"url": {
-							"raw": "https://api.nexmo.com/verify/json",
+							"raw": "https://api.nexmo.com/verify/json?api_key={{api_key}}&api_secret={{api_secret}}&number={{customer_number}}&brand=Nexmo&next_event_wait=300",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -102,28 +107,23 @@
 							"query": [
 								{
 									"key": "api_key",
-									"value": "{{api_key}}",
-									"disabled": true
+									"value": "{{api_key}}"
 								},
 								{
 									"key": "api_secret",
-									"value": "{{api_secret}}",
-									"disabled": true
+									"value": "{{api_secret}}"
 								},
 								{
 									"key": "number",
-									"value": "{{in_number}}",
-									"disabled": true
+									"value": "{{customer_number}}"
 								},
 								{
 									"key": "brand",
-									"value": "Nexmo",
-									"disabled": true
+									"value": "Nexmo"
 								},
 								{
 									"key": "next_event_wait",
-									"value": "300",
-									"disabled": true
+									"value": "300"
 								}
 							]
 						}
@@ -139,7 +139,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://api.nexmo.com/verify/check/json?api_key={{api_key}}&api_secret={{api_secret}}&request_id=cfc68f16f2bd434289bc8745ee848f62&code=0978",
+							"raw": "https://api.nexmo.com/verify/check/json?api_key={{api_key}}&api_secret={{api_secret}}&request_id=58255c50227d45b780b3b60f545035a4&code=4133",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -162,11 +162,11 @@
 								},
 								{
 									"key": "request_id",
-									"value": "cfc68f16f2bd434289bc8745ee848f62"
+									"value": "58255c50227d45b780b3b60f545035a4"
 								},
 								{
 									"key": "code",
-									"value": "0978"
+									"value": "4133"
 								}
 							]
 						}
@@ -242,7 +242,7 @@
 								},
 								{
 									"key": "to",
-									"value": "{{personal_in}}",
+									"value": "{{customer_number}}",
 									"type": "text"
 								},
 								{
@@ -296,7 +296,7 @@
 								},
 								{
 									"key": "to",
-									"value": "{{personal_sg}}",
+									"value": "{{customer_number}}",
 									"type": "text"
 								},
 								{
@@ -311,7 +311,7 @@
 								},
 								{
 									"key": "callback",
-									"value": "https://voice-feb-amer-utlxv.run-ap-south1.goorm.io",
+									"value": "https://voice-apr-emea-tdpfc.run-ap-south1.goorm.io/webhooks/dlr",
 									"type": "text"
 								}
 							]
